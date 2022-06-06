@@ -16,7 +16,12 @@ dependencies:
   hooks_riverpod: ^1.0.2
   flutter_gen: ^4.1.2
   freezed_annotation: ^1.1.0
+
+  # アイコン用。built-inのアイコンはandroid用なのでiosで表示されないケースがあるので。
   font_awesome_flutter: ^10.1.0
+
+  # カレンダー用
+  table_calendar: ^3.0.6
 
 dev_dependencies:
   flutter_test:
