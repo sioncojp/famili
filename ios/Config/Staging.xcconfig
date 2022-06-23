@@ -1,0 +1,14 @@
+#include "Flutter/Generated.xcconfig"
+
+TRACK_WIDGET_CREATION=
+
+FLUTTER_FLAVOR=staging
+FLUTTER_TARGET=$(PROJECT_DIR)/../lib/main.dart
+PRODUCT_BUNDLE_IDENTIFIER=jp.famili.app.staging
+DISPLAY_NAME=famili-staging
+ICON_NAME=AppIcon-staging
+
+FIREBASE_DIR=$(PROJECT_DIR)/$(PROJECT_NAME)/Resources/Firebase/Staging
+
+// GOOGLE prefix key configs were copied from GoogleService-Info.plist
+GOOGLE_REVERSED_CLIENT_ID = com.googleusercontent.apps.853137171316-ngt2njfivp5tnecef2ba8evp24bidl47

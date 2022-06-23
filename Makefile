@@ -21,8 +21,11 @@ build-android: require_env ## build-android
 build-ios: require_env ## build-ios
 	flutter build ios --release --no-codesign --dart-define=FLAVOR=Config/$(ENV) --target lib/main.dart
 
-run: require_env ## run
-	flutter run --flavor $(ENV) --dart-define=FLAVOR=$(ENV) --target lib/main.dart
+run: require_env ## run --debug
+	flutter run --debug --flavor $(ENV)
+
+run/release: require_env ## run --release
+	flutter run --release --flavor $(ENV)
 
 unit-test: ## test
 	flutter test --coverage --coverage-path=./coverage/lcov.info
