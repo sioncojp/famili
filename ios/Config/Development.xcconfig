@@ -1,0 +1,14 @@
+#include "Flutter/Generated.xcconfig"
+
+TRACK_WIDGET_CREATION=
+
+FLUTTER_FLAVOR=development
+FLUTTER_TARGET=$(PROJECT_DIR)/../lib/main.dart
+PRODUCT_BUNDLE_IDENTIFIER=jp.famili.app.development
+DISPLAY_NAME=famili-development
+ICON_NAME=AppIcon-development
+
+FIREBASE_DIR=$(PROJECT_DIR)/$(PROJECT_NAME)/Resources/Firebase/Development
+
+// GOOGLE prefix key configs were copied from GoogleService-Info.plist
+GOOGLE_REVERSED_CLIENT_ID = com.googleusercontent.apps.831730356432-qieadfmvcprs76mjj7ki4pll4d7r9j9d
