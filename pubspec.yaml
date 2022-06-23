@@ -33,3 +33,10 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   freezed: ^1.1.1
   json_serializable: ^6.1.4
+
+  # launcher_icon用
+  flutter_launcher_icons: ^0.9.3
+
+flutter_icons:
+  android: true
+  ios: true

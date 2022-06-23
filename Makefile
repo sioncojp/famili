@@ -19,7 +19,7 @@ build-android: require_env ## build-android
 	flutter build apk --flavor $(ENV) --dart-define=FLAVOR=$(ENV) --target lib/main.dart
 
 build-ios: require_env ## build-ios
-	flutter build ios --release --no-codesign --flavor $(env) --dart-define=FLAVOR=$(env) --target lib/main.dart
+	flutter build ios --release --no-codesign --dart-define=FLAVOR=Config/$(ENV) --target lib/main.dart
 
 run: require_env ## run
 	flutter run --flavor $(ENV) --dart-define=FLAVOR=$(ENV) --target lib/main.dart
@@ -29,6 +29,6 @@ unit-test: ## test
 
 require_env:
 ifeq ($(ENV),)
-	@echo -e "$(RED)you must set a argument ENV=xxx$(NC)"
+	@echo "you must set a argument ENV=xxx"
 	@exit 1
 endif
