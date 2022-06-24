@@ -43,11 +43,23 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.flutter_famili"
+        applicationId "jp.famili.app"
         minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        production {
+        }
+        development {
+            applicationIdSuffix ".development"
+        }
+        staging {
+            applicationIdSuffix ".staging"
+        }
     }
 
     buildTypes {
