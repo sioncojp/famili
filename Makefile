@@ -16,16 +16,16 @@ build: ## build
 	flutter packages pub run build_runner build --delete-conflicting-outputs
 
 build-android: require_env ## build-android
-	flutter build apk --flavor $(ENV) --dart-define=FLAVOR=$(ENV) --target lib/main.dart
+	flutter build apk --flavor $(ENV) --dart-define=FLAVOR=$(ENV)
 
 build-ios: require_env ## build-ios
-	flutter build ios --release --no-codesign --dart-define=FLAVOR=Config/$(ENV) --target lib/main.dart
+	flutter build ios --release --no-codesign --dart-define=FLAVOR=$(ENV)
 
 run: require_env ## run --debug
-	flutter run --debug --flavor $(ENV)
+	flutter run --debug --flavor $(ENV) --dart-define=FLAVOR=$(ENV)
 
 run/release: require_env ## run --release
-	flutter run --release --flavor $(ENV)
+	flutter run --release --flavor $(ENV) --dart-define=FLAVOR=$(ENV)
 
 unit-test: ## test
 	flutter test --coverage --coverage-path=./coverage/lcov.info

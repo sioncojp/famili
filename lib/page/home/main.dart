@@ -1,3 +1,4 @@
+import 'package:app/config/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -10,6 +11,8 @@ class PageHome extends ConsumerStatefulWidget {
 }
 
 class _PageHome extends ConsumerState<PageHome> {
+  final String apiUrl = Environment().config.apiUrl;
+
   @override
   void initState() {
     super.initState();
@@ -19,7 +22,7 @@ class _PageHome extends ConsumerState<PageHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("home"),
+        title: Text(apiUrl),
       ),
       body: Center(
         child: Column(
